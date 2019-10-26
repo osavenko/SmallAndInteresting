@@ -1,2 +1,0 @@
-# SmallAndInteresting
-SmallAndInteresting
