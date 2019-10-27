@@ -6,17 +6,14 @@ import java.util.Stack;
 
 public class IssuanceСard {
     private Stack<Card> deck;
-    private int players;
 
-    public IssuanceСard(Deck deck, int players) {
+    public IssuanceСard(Deck deck) {
         this.deck = new Stack<>();
         for (Card card:deck.getCardList()) {
             this.deck.push(card);
         }
-        this.players = players;
     }
     public void print(){
-        System.out.println("Колода раздается на "+this.players+" ");
         System.out.println("В колоде "+deck.size()+" карт/карта");
     }
     public Card reciveCard(){
