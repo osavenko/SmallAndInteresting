@@ -35,6 +35,5 @@ public class DeckTest {
             Card card = deck.getCardList().get(i);
             assertNotNull(card);
         }
-
     }
 }
