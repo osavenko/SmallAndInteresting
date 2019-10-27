@@ -1,6 +1,7 @@
 package Stupid;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
@@ -28,5 +29,8 @@ public class Deck {
             cardList.add(new Card(i+6,Suit.DIAMONDS));
             cardList.add(new Card(i+6,Suit.HEARTS));
         }
+    }
+    public void shuffle(){
+        Collections.shuffle(cardList);
     }
 }

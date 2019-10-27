@@ -54,7 +54,7 @@ public class Card implements Comparable<Card> {
                 sb.append("туз ");
                 break;
             default:
-                    sb.append("джокер ");
+                    sb.append("ДЖОКЕР ");
         }
         switch (this.getSuit()){
             case CLUBS:
