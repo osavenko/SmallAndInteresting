@@ -17,9 +17,12 @@ public class IssuanceСard {
         System.out.println("В колоде "+deck.size()+" карт/карта");
     }
     public Card reciveCard(){
-        if(this.deck.size()>0) {
+        if(!this.deck.empty()) {
             return this.deck.pop();
         }
         return null;
+    }
+    public int getSize(){
+        return deck.size();
     }
 }
