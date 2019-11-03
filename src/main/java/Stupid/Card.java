@@ -29,48 +29,30 @@ public class Card implements Comparable<Card> {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("карта ");
-        switch(this.getRank()){
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 10:
-                sb.append(this.getRank()+" ");
-                break;
-            case 11:
-                sb.append("валет ");
-                break;
-            case 12:
-                sb.append("дама ");
-                break;
-            case 13:
-                sb.append("король ");
-                break;
-            case 14:
-                sb.append("туз ");
-                break;
-            default:
-                    sb.append("ДЖОКЕР ");
+        if(this.getRank()<=10){
+            sb.append(this.getRank()+" ");
+        } else if(this.getRank()==11){
+            sb.append("валет ");
+        } else if(this.getRank()==12){
+            sb.append("дама ");
+        } else if(this.getRank()==13){
+            sb.append("король ");
+        } else if(this.getRank()==14){
+            sb.append("туз ");
+        } else{
+            sb.append("ДЖОКЕР ");
         }
-        switch (this.getSuit()){
-            case CLUBS:
-                sb.append("треф");
-                break;
-            case SPADES:
-                sb.append("пика");
-                break;
-            case DIAMONDS:
-                sb.append("бубна");
-                break;
-            case HEARTS:
-                sb.append("червей");
-                break;
-            default:
-                sb.append("*");
+
+        if(this.getSuit()==Suit.CLUBS){
+            sb.append("треф");
+        }else if(this.getSuit()==Suit.SPADES){
+            sb.append("пика");
+        }else if(this.getSuit()==Suit.DIAMONDS){
+            sb.append("бубна");
+        }else if(this.getSuit()==Suit.DIAMONDS){
+            sb.append("червей");
+        }else{
+            sb.append("*");
         }
         return sb.toString();
     }
