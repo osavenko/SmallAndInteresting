@@ -29,6 +29,27 @@ public class Card implements Comparable<Card> {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("карта ");
+        writeRankToString(sb);
+
+        writeSuitToString(sb);
+        return sb.toString();
+    }
+
+    private void writeSuitToString(StringBuilder sb) {
+        if(this.getSuit()== Suit.CLUBS){
+            sb.append("треф");
+        }else if(this.getSuit()==Suit.SPADES){
+            sb.append("пика");
+        }else if(this.getSuit()==Suit.DIAMONDS){
+            sb.append("бубна");
+        }else if(this.getSuit()==Suit.DIAMONDS){
+            sb.append("червей");
+        }else{
+            sb.append("*");
+        }
+    }
+
+    private void writeRankToString(StringBuilder sb) {
         if(this.getRank()<=10){
             sb.append(this.getRank()+" ");
         } else if(this.getRank()==11){
@@ -42,18 +63,5 @@ public class Card implements Comparable<Card> {
         } else{
             sb.append("ДЖОКЕР ");
         }
-
-        if(this.getSuit()==Suit.CLUBS){
-            sb.append("треф");
-        }else if(this.getSuit()==Suit.SPADES){
-            sb.append("пика");
-        }else if(this.getSuit()==Suit.DIAMONDS){
-            sb.append("бубна");
-        }else if(this.getSuit()==Suit.DIAMONDS){
-            sb.append("червей");
-        }else{
-            sb.append("*");
-        }
-        return sb.toString();
     }
 }
