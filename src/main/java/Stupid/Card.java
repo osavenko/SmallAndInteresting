@@ -42,7 +42,7 @@ public class Card implements Comparable<Card> {
             sb.append("пика");
         }else if(this.getSuit()==Suit.DIAMONDS){
             sb.append("бубна");
-        }else if(this.getSuit()==Suit.DIAMONDS){
+        }else if(this.getSuit()==Suit.HEARTS){
             sb.append("червей");
         }else{
             sb.append("*");
