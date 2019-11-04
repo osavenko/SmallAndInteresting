@@ -33,4 +33,8 @@ public class Deck {
     public void shuffle(){
         Collections.shuffle(cardList);
     }
+    public void print(){
+
+        this.getCardList().stream().forEach(System.out::println);
+    }
 }

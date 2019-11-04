@@ -15,6 +15,7 @@ public class IssuanceСard {
     }
     public void print(){
         System.out.println("В колоде "+deck.size()+" карт/карта");
+        deck.stream().forEach(System.out::println);
     }
     public Card reciveCard(){
         if(!this.deck.empty()) {
